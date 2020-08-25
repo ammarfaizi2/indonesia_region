@@ -17,7 +17,7 @@ $i      = 0;
 while ($r = $st->fetch(PDO::FETCH_ASSOC)) {
   $iQuery .= ($i++ ? "," : "")."(?,?,?)";
   $data[]  = $hashProvinsi[(int)substr($r["kode"], 0, 2)];
-  $data[]  = (int)$r["kode"];
+  $data[]  = substr($r["kode"], 3);
   $data[]  = $r["nama"];
 }
 
