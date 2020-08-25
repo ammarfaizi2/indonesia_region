@@ -24,7 +24,7 @@ class Provinsi extends GoogleMapsScraper
     // ["0x2e7a1c951240608b:0x4027a76e352edc0","Karangmalang, Sragen, Jawa Tengah, Indonesia",null,[null,null,-7.4431005,111.0220207]
 
     if (preg_match(
-      "/\[\"0x[0-9a-f]+?:0x[0-9a-f]+?\",\"{$query}\",.+?([\-0-9\.]+?),([\-0-9\.]+?)\]/",
+      "/\[\"0x[0-9a-f]+?:0x[0-9a-f]+?\",\"{$query}\",.{10,50}([\-0-9\.]+?),([\-0-9\.]+?)\]/",
       $o["out"],
       $m
     )) {
