@@ -1,1 +1,1 @@
-mysqldump --column-statistics=0 -h 192.168.50.2 -P9999 indonesia_region --add-drop-table provinsi kabupaten kecamatan kelurahan > database.sql
+mysqldump --column-statistics=0 -h 192.168.50.2 -P9999 indonesia_region --add-drop-table provinsi kabupaten kecamatan kelurahan | gzip -9c > database.sql.gz
